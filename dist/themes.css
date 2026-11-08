@@ -1,13 +1,18 @@
 /* The initial theme is resolved in the head before styles paint. */
 .header-actions{display:flex;align-items:center;gap:14px}
-.theme-control{position:relative;display:grid;place-items:center;width:36px;height:36px;color:var(--muted);border-radius:50%;cursor:pointer}
-.theme-control>span{display:grid;place-items:center;pointer-events:none;color:inherit}
+.theme-control{position:relative;width:36px;height:36px;color:var(--muted)}
+.theme-control>summary{display:grid;place-items:center;list-style:none;width:100%;height:100%;border-radius:50%;cursor:pointer}
+.theme-control>summary::-webkit-details-marker{display:none}
 .theme-control svg{width:17px;height:17px;display:block;stroke:currentColor;stroke-width:1.5;fill:none}
-.theme-control:hover{color:var(--text);background:color-mix(in srgb,var(--text) 5%,transparent)}
-.theme-control:focus-within{outline:2px solid var(--accent);outline-offset:2px}
-/* Keep the native select for keyboard and touch; only its small icon is visible. */
-#theme-select{position:absolute;inset:0;width:100%;height:100%;min-width:0;margin:0;padding:0;opacity:0;cursor:pointer;font:inherit;color:var(--text);background:var(--bg);border:0}
-#theme-select:focus{outline:none}
+.theme-control>summary:hover{color:var(--text);background:color-mix(in srgb,var(--text) 5%,transparent)}
+.theme-control>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.theme-control .theme-options{position:absolute;right:0;top:calc(100% + 9px);width:142px;padding:5px;background:var(--bg);border:1px solid var(--line);border-radius:9px;box-shadow:0 8px 25px #0002;z-index:30}
+.theme-control:not([open]) .theme-options{display:none}
+.theme-options button{display:flex;align-items:center;justify-content:space-between;width:100%;padding:8px 11px;background:none;border:0;border-radius:5px;color:var(--muted);font-size:12px;text-align:left}
+.theme-options button:hover,.theme-options button:focus-visible{background:color-mix(in srgb,var(--text) 7%,transparent);color:var(--text)}
+.theme-options button[aria-pressed="true"]{color:var(--text)}
+.theme-check{visibility:hidden;font-size:11px}
+.theme-options button[aria-pressed="true"] .theme-check{visibility:visible}
 .skill-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
 .skill-grid article{grid-column:span 2}
 .skill-grid article:nth-child(4),.skill-grid article:nth-child(5){grid-column:span 3}
