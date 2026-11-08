@@ -24,7 +24,7 @@ toolkitRoot.addEventListener('pointerover',e=>{if(e.pointerType==='touch')return
 toolkitRoot.addEventListener('focusin',e=>{const b=e.target.closest('[data-tool]');if(b)showTool(b.dataset.tool)});
 toolkitRoot.addEventListener('click',e=>{const b=e.target.closest('[data-tool]');if(b)showTool(b.dataset.tool)});showTool('python');
 
-const skillIcons=[['tensorflow','keras','scikitlearn'],['opencv','python'],['laravel','flutter','javascript'],['git','docker','postgresql']];
+const skillIcons=[['tensorflow','keras','scikitlearn'],['opencv','python'],['laravel','javascript'],['flutter','dart'],['git','docker','postgresql']];
 document.querySelectorAll('.skill-grid article').forEach((card,i)=>{const strip=document.createElement('div');strip.className='category-logos';strip.innerHTML=skillIcons[i].map(id=>`<img src="assets/logos/${id}.svg" alt="${toolkit.find(t=>t[0]===id)[1]}" width="26" height="26" loading="lazy">`).join('');card.prepend(strip)});
 const projectLogos={sisiraja:['laravel','javascript'],ihoya:['tensorflow','flutter','dart'],salary:['python','scikitlearn'],vehicles:['opencv','python'],cats:['tensorflow','keras','python']};
 function decorateProjects(){document.querySelectorAll('.project-card').forEach(card=>{if(card.querySelector('.project-stack'))return;const stack=document.createElement('div');stack.className='project-stack';stack.innerHTML=projectLogos[card.dataset.project].map(id=>`<span><img src="assets/logos/${id}.svg" alt="" width="16" height="16">${toolkit.find(t=>t[0]===id)[1]}</span>`).join('');card.append(stack)})}
