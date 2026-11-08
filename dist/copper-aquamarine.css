@@ -1,0 +1,46 @@
+/* Copper Aquamarine Dream. Deeper copper and teal shades keep small text readable. */
+:root{--peach:#dcaa89;--deep-teal:#30525c;--copper:#c35627;--terracotta:#d6794d;--aquamarine:#4c848d;--warm-gray:#bfb9b5;--paper:#f4e9df;--accent:#aa4521;--bg:var(--paper);--panel:#e7c5ad;--text:#203d45;--muted:#40565b;--line:#c8b4a7}
+::selection{background:var(--deep-teal);color:#fff}
+body{color-scheme:light}
+#scroll-progress{background:var(--terracotta)}
+header{background:#f4e9dff0}
+h1,h2{color:var(--deep-teal)}
+h1 em{background-image:linear-gradient(100deg,#a94320,var(--copper),#a94320)}
+.hero:before{background:radial-gradient(350px circle at var(--hx,70%) var(--hy,35%),#4c848d22,transparent 75%)}
+.primary,.tabs button.active{color:#fff}
+.primary{background:var(--accent)}
+.primary:hover{background:#8f391c}
+.floating-label{background:var(--peach);color:#203d45;box-shadow:0 12px 32px #30525c26}
+.photo-corner{color:#fff}
+.photo-frame{border-color:#c3562755;box-shadow:0 20px 70px #30525c26}
+.hero-badge{background:#fbf2ebf2;border-color:#4c848d55}
+.ticker{background:var(--deep-teal);border-color:var(--deep-teal)}
+.ticker>.ticker-track{font-size:20px;font-weight:700}
+.ticker-group>span:nth-child(odd){color:#fff}
+.ticker-group>span:nth-child(even){color:var(--peach)}
+.ticker-toggle{background:#f4e9dff5;color:var(--deep-teal);border-color:#ffffff80}
+.projects{background:#d8e4e3}
+.projects em{color:#9d421f}
+.project-card .project-image{background:#bfcfcf}
+.project-card[data-project="sisiraja"] .project-image{background:#abc6ca}
+.project-card:nth-child(3) .project-image{background:#dcaa89}
+.project-card:nth-child(4) .project-image{background:#bfb9b5}
+.project-card:nth-child(5) .project-image{background:#d9b49d}
+.project-image .arrow{color:var(--deep-teal)}
+.project-card:hover .arrow{background:var(--deep-teal);color:#fff}
+.filters button.active{background:var(--deep-teal);border-color:var(--deep-teal);color:#fff}
+.project-stack span{background:#f4e9df;color:var(--deep-teal)}
+.skills{background:#e7c5ad}
+.skill-grid article{background:#f4e9df99;border-color:#b59884}
+.skill-grid article:hover{background:#fbf2eb;border-color:var(--aquamarine)}
+.tool,.tool-inspector{--tool-color:var(--deep-teal)!important}
+.tool{background:#fbf2eb}
+.tool:hover,.tool:focus-visible,.tool.selected{background:#d8e4e3;color:var(--text)}
+.tool-inspector{background:#fbf2eb}
+.tool[data-tool=github] img,.tool-inspector:has(img[src$="github.svg"]) .inspector-icon img,.tool[data-tool=amazonwebservices] img{filter:none}
+.inspector-icon{background:#dcaa8966}
+.tags span,.dialog-tag{color:#9d421f}
+dialog{background:var(--paper)}
+.skip{background:var(--deep-teal);color:#fff}
+#copy-status{color:var(--deep-teal)}
+@media(max-width:600px){header nav{background:var(--paper)}}
