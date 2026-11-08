@@ -26,7 +26,7 @@ toolkitRoot.addEventListener('click',e=>{const b=e.target.closest('[data-tool]')
 
 const skillIcons=[['tensorflow','keras','scikitlearn'],['opencv','python'],['laravel','flutter','javascript'],['git','docker','postgresql']];
 document.querySelectorAll('.skill-grid article').forEach((card,i)=>{const strip=document.createElement('div');strip.className='category-logos';strip.innerHTML=skillIcons[i].map(id=>`<img src="assets/logos/${id}.svg" alt="${toolkit.find(t=>t[0]===id)[1]}" width="26" height="26" loading="lazy">`).join('');card.prepend(strip)});
-const projectLogos={ihoya:['tensorflow','flutter','dart'],salary:['python','scikitlearn'],vehicles:['opencv','python'],cats:['tensorflow','keras','python']};
+const projectLogos={sisiraja:['laravel','javascript'],ihoya:['tensorflow','flutter','dart'],salary:['python','scikitlearn'],vehicles:['opencv','python'],cats:['tensorflow','keras','python']};
 function decorateProjects(){document.querySelectorAll('.project-card').forEach(card=>{if(card.querySelector('.project-stack'))return;const stack=document.createElement('div');stack.className='project-stack';stack.innerHTML=projectLogos[card.dataset.project].map(id=>`<span><img src="assets/logos/${id}.svg" alt="" width="16" height="16">${toolkit.find(t=>t[0]===id)[1]}</span>`).join('');card.append(stack)})}
 decorateProjects();new MutationObserver(decorateProjects).observe(document.querySelector('#project-grid'),{childList:true});
 
@@ -42,3 +42,6 @@ function updateProgress(){scrollFrame=0;const total=document.documentElement.scr
 window.addEventListener('scroll',()=>{if(!scrollFrame)scrollFrame=requestAnimationFrame(updateProgress)},{passive:true});window.addEventListener('resize',updateProgress);updateProgress();
 const observedSections=document.querySelectorAll('main section[id]');
 if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(!entry.isIntersecting)continue;document.querySelectorAll('nav a').forEach(a=>{const active=a.getAttribute('href')===`#${entry.target.id}`;a.classList.toggle('current',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')})}},{rootMargin:'-15% 0px -55% 0px'});observedSections.forEach(s=>observer.observe(s))}
+
+const tickerToggle=document.querySelector('.ticker-toggle');
+tickerToggle.addEventListener('click',()=>{const paused=tickerToggle.getAttribute('aria-pressed')!=='true';document.querySelector('.ticker').classList.toggle('ticker-paused',paused);tickerToggle.setAttribute('aria-pressed',String(paused));tickerToggle.setAttribute('aria-label',paused?'Resume scrolling text':'Pause scrolling text');tickerToggle.textContent=paused?'▶':'Ⅱ'});
