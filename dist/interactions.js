@@ -1,24 +1,24 @@
 // All logos are bundled locally. The text labels remain visible on every device.
 const toolkit=[
- ['python','Python','Data & AI','Pengolahan data, eksperimen machine learning, dan computer vision.','#78b8e4'],
- ['tensorflow','TensorFlow','Deep Learning','Pengembangan model deep learning dan deployment melalui TensorFlow Lite.','#ffad56'],
- ['keras','Keras','Deep Learning','Membangun serta melatih model klasifikasi citra dengan transfer learning.','#ef7777'],
- ['scikitlearn','Scikit-learn','Machine Learning','Preprocessing, perbandingan algoritma, dan evaluasi model.','#f1b66c'],
- ['opencv','OpenCV','Computer Vision','Pemrosesan citra, thresholding, morfologi, dan deteksi kontur.','#95d88d'],
- ['laravel','Laravel','Web Development','Pengembangan aplikasi web dan sistem informasi geografis.','#ff817b'],
- ['flutter','Flutter','Mobile Development','Aplikasi Android iHoya dan integrasi model TensorFlow Lite.','#71cafa'],
- ['javascript','JavaScript','Web Development','Interaksi antarmuka dan pengembangan aplikasi web.','#f3db63'],
- ['dart','Dart','Mobile Development','Pengembangan aplikasi mobile menggunakan Flutter.','#70d5df'],
- ['git','Git','Version Control','Pengelolaan versi kode dalam proses pengembangan perangkat lunak.','#f58c72'],
- ['github','GitHub','Collaboration','Pengelolaan repositori kode dan kolaborasi pengembangan proyek.','#e2e8dd'],
- ['docker','Docker','Development Tools','Mendukung alur pengembangan dan deployment perangkat lunak.','#80c6f8'],
- ['mysql','MySQL','Database','Pengelolaan data relasional untuk aplikasi.','#8bc7de'],
- ['postgresql','PostgreSQL','Database','Pengelolaan data menggunakan database relasional.','#96bde8'],
- ['firebase','Firebase','Backend Services','Pengelolaan data untuk mendukung pengembangan aplikasi.','#ffd675'],
- ['amazonwebservices','AWS','Cloud','Teknologi cloud untuk mendukung deployment dan pengembangan.','#ffc270']
+ ['python','Python','Data & AI','Data processing, machine learning experiments, and computer vision.','#78b8e4'],
+ ['tensorflow','TensorFlow','Deep Learning','Deep learning model development and deployment with TensorFlow Lite.','#ffad56'],
+ ['keras','Keras','Deep Learning','Building and training image classification models with transfer learning.','#ef7777'],
+ ['scikitlearn','Scikit-learn','Machine Learning','Data preprocessing, algorithm comparison, and model evaluation.','#f1b66c'],
+ ['opencv','OpenCV','Computer Vision','Image processing, thresholding, morphology, and contour detection.','#95d88d'],
+ ['laravel','Laravel','Web Development','Web application and geographic information system development.','#ff817b'],
+ ['flutter','Flutter','Mobile Development','The iHoya Android application and TensorFlow Lite model integration.','#71cafa'],
+ ['javascript','JavaScript','Web Development','Interactive interfaces and web application development.','#f3db63'],
+ ['dart','Dart','Mobile Development','Mobile application development with Flutter.','#70d5df'],
+ ['git','Git','Version Control','Code version control throughout the software development process.','#f58c72'],
+ ['github','GitHub','Collaboration','Code repository management and collaborative project development.','#e2e8dd'],
+ ['docker','Docker','Development Tools','Supporting software development and deployment workflows.','#80c6f8'],
+ ['mysql','MySQL','Database','Relational data management for applications.','#8bc7de'],
+ ['postgresql','PostgreSQL','Database','Data management using relational databases.','#96bde8'],
+ ['firebase','Firebase','Backend Services','Data management to support application development.','#ffd675'],
+ ['amazonwebservices','AWS','Cloud','Cloud technology to support deployment and development.','#ffc270']
 ];
 const toolkitRoot=document.querySelector('#toolkit-explorer');
-toolkitRoot.innerHTML=`<div class="toolkit-intro"><span class="eyebrow"><span class="dot"></span> MY EVERYDAY TOOLBOX</span><p>Arahkan mouse, fokuskan, atau pilih teknologi untuk menjelajahinya.</p></div><div class="toolkit-board">${toolkit.map(([id,name,category,description,color])=>`<button class="tool" data-tool="${id}" style="--tool-color:${color}" aria-pressed="false" aria-describedby="tool-description"><span class="tool-icon"><img src="assets/logos/${id}.svg" alt="" width="36" height="36" loading="lazy"></span><span>${name}</span><span class="tool-plus" aria-hidden="true">↗</span></button>`).join('')}</div><div class="tool-inspector"><div class="inspector-icon"><img id="tool-active-icon" src="assets/logos/python.svg" alt="" width="42" height="42"></div><div><span id="tool-category">Data & AI</span><h3 id="tool-name">Python</h3><p id="tool-description">${toolkit[0][3]}</p></div><span class="inspector-deco" aria-hidden="true">{ }</span></div>`;
+toolkitRoot.innerHTML=`<div class="toolkit-intro"><span class="eyebrow"><span class="dot"></span> MY EVERYDAY TOOLBOX</span><p>Hover, focus, or select a technology to explore it.</p></div><div class="toolkit-board">${toolkit.map(([id,name,category,description,color])=>`<button class="tool" data-tool="${id}" style="--tool-color:${color}" aria-pressed="false" aria-describedby="tool-description"><span class="tool-icon"><img src="assets/logos/${id}.svg" alt="" width="36" height="36" loading="lazy"></span><span>${name}</span><span class="tool-plus" aria-hidden="true">↗</span></button>`).join('')}</div><div class="tool-inspector"><div class="inspector-icon"><img id="tool-active-icon" src="assets/logos/python.svg" alt="" width="42" height="42"></div><div><span id="tool-category">Data & AI</span><h3 id="tool-name">Python</h3><p id="tool-description">${toolkit[0][3]}</p></div><span class="inspector-deco" aria-hidden="true">{ }</span></div>`;
 function showTool(id){const tool=toolkit.find(t=>t[0]===id);if(!tool)return;document.querySelector('#tool-active-icon').src=`assets/logos/${id}.svg`;document.querySelector('#tool-name').textContent=tool[1];document.querySelector('#tool-category').textContent=tool[2];document.querySelector('#tool-description').textContent=tool[3];document.querySelector('.tool-inspector').style.setProperty('--tool-color',tool[4]);document.querySelectorAll('[data-tool]').forEach(b=>{const active=b.dataset.tool===id;b.classList.toggle('selected',active);b.setAttribute('aria-pressed',String(active))})}
 toolkitRoot.addEventListener('pointerover',e=>{if(e.pointerType==='touch')return;const b=e.target.closest('[data-tool]');if(b)showTool(b.dataset.tool)});
 toolkitRoot.addEventListener('focusin',e=>{const b=e.target.closest('[data-tool]');if(b)showTool(b.dataset.tool)});
