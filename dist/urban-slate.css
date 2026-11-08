@@ -1,0 +1,32 @@
+/* Urban Slate: supplied palette, with darker slate for readable text and controls. */
+:root{--paper:#e9e6e7;--brown:#5e5653;--slate-gray:#7b7f8a;--taupe:#ab978c;--slate:#6b7c98;--accent:#52637d;--bg:var(--paper);--panel:#ded9d7;--text:#3f3937;--muted:#625b58;--line:#c9c1bd}
+::selection{background:var(--slate);color:#fff}
+body{color-scheme:light}
+.primary,.tabs button.active{color:#fff}
+.floating-label{background:var(--brown);color:var(--paper)}
+.photo-corner{color:#fff}
+.photo-frame{box-shadow:0 20px 70px #5e565326}
+.hero-badge{background:#f1eeeff2}
+.ticker{background:var(--slate);border-color:var(--slate)}
+.ticker>.ticker-track{font-size:20px;font-weight:700}
+.ticker-group>span:nth-child(odd){color:#fff}
+.ticker-group>span:nth-child(even){color:var(--paper)}
+.ticker-toggle{background:#e9e6e7f5;color:var(--brown);border-color:#ffffff80}
+.projects{background:#dce0e6}
+.project-image .arrow{color:var(--brown)}
+.project-card:hover .arrow{color:#fff}
+.filters button.active{color:#fff}
+.skill-grid article{background:#e9e6e780}
+.skill-grid article:hover{background:#f1eeef;border-color:var(--slate)}
+.tool,.tool-inspector{--tool-color:var(--accent)!important}
+.tool{background:#f1eeef}
+.tool:hover,.tool:focus-visible,.tool.selected{background:#dce0e6;color:var(--text)}
+.tool-inspector{background:#f1eeef}
+.tool[data-tool=github] img,.tool-inspector:has(img[src$="github.svg"]) .inspector-icon img,.tool[data-tool=amazonwebservices] img{filter:none}
+.inspector-icon{background:#e3dcd8}
+.tags span,.dialog-tag{color:var(--accent)}
+dialog{background:var(--paper)}
+.project-stack span{background:#e9e6e7;color:var(--brown)}
+.skip{background:var(--accent);color:#fff}
+#copy-status{color:var(--accent)}
+@media(max-width:600px){header nav{background:var(--paper)}}
