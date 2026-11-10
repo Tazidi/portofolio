@@ -1,3 +1,17 @@
+# File lokal dan hasil QA
+.openai/
 qa/
+
+# Arsip
 *.tar.gz
 *.zip
+
+# Rahasia / konfigurasi lokal
+.env
+.env.*
+!.env.example
+
+# Log dan file OS
+*.log
+.DS_Store
+Thumbs.db
