@@ -1,13 +1,53 @@
-# Rizki Tazidi Zayd — Interactive Portfolio
+# Rizki Tazidi Zayd — Portfolio
 
-Responsive English-language website based on the supplied portfolio. Includes project filters and detail dialogs, professional and leadership experience, mobile navigation, contact links, and an external Google Drive resume link. No framework or build step is required.
+> Driven by curiosity. Built with code.
 
-The expertise strip loops continuously from right to left, with a pause control and reduced-motion support. The hero uses the original About Me photo. SISIRAJA is included as an internship project with a screenshot extracted from the final portfolio slide.
+Portfolio pribadi Rizki Tazidi Zayd, lulusan Informatika Institut Teknologi Nasional Bandung (ITENAS) dengan IPK 3,79/4,00. Website ini memperkenalkan profil, karya, pengalaman profesional, dan kegiatan organisasi dengan fokus pada artificial intelligence, computer vision, serta pengembangan aplikasi web dan mobile.
 
-Jalankan dari folder ini dengan `python -m http.server 4173 --directory dist`, lalu buka http://localhost:4173. Konten proyek dan pengalaman ada di `dist/app.js`, struktur halaman di `dist/index.html`, dan desain di `dist/style.css`.
+## Proyek Pilihan
 
-Foto serta dokumentasi proyek diekstrak dari PDF asli. Website ini menampilkan dokumentasi; tidak menjalankan model ML. Font Google bersifat opsional, dengan fallback lokal.
+| Proyek | Deskripsi | Teknologi utama |
+| --- | --- | --- |
+| **iHoya** | Aplikasi Android untuk mengidentifikasi 30 spesies Hoya melalui citra daun dan bunga, dilengkapi informasi pemanfaatan tanaman, riwayat klasifikasi, dan geotagging. | MobileNetV3-Large, TensorFlow Lite, Flutter, Transfer Learning |
+| **SISIRAJA** | Sistem informasi geografis Sesar Lembang dan sesar aktif Jawa bagian barat, dengan peta interaktif, berita dan artikel ilmiah, serta identifikasi sekolah di sekitar sesar aktif. Dikembangkan selama magang di BRIN. | Laravel, Leaflet, GeoJSON, PHP, JavaScript |
+| **Employee Salary Prediction** | Penelitian prediksi gaji karyawan yang membandingkan lima algoritma machine learning dengan validasi silang 5-fold. Gradient Boosting memberikan hasil terbaik dalam penelitian ini. | Python, Scikit-learn, Gradient Boosting, Streamlit |
+| **Car & Motorcycle Detection** | Pengolahan video untuk mendeteksi dan mengklasifikasikan mobil serta sepeda motor berdasarkan ukuran kontur. | OpenCV, Otsu Thresholding, Morfologi, Contour Detection |
+| **Cat Breed Classification** | Klasifikasi citra untuk mengenali 12 kelas ras kucing menggunakan transfer learning dan augmentasi citra. | ResNet50V2, Transfer Learning, Image Augmentation |
 
-Interaksi hover, tilt, spotlight, indikator gulir, dan penjelajah toolkit ada di `dist/interactions.js` dan `dist/motion.css`. Efek pointer dibatasi untuk mouse dan menghormati `prefers-reduced-motion`; toolkit tetap dapat digunakan lewat keyboard dan sentuhan.
+[Baca publikasi Employee Salary Prediction](https://jrl.eng.unila.ac.id/index.php/ojs/article/view/115/86).
 
-Logo teknologi menggunakan aset SVG Devicon v2.17.0: https://github.com/devicons/devicon/tree/v2.17.0. Merek dan logo tetap milik pemiliknya masing-masing. Logo disertakan secara lokal di `dist/assets/logos`.
+## Pengalaman Profesional
+
+- **Asisten Laboratorium Machine Learning — ITENAS Bandung** · Februari–Juli 2026: membimbing pengolahan data, visualisasi, preprocessing, penerapan algoritma machine learning dengan Python, serta pengembangan dan evaluasi model.
+- **Asisten Laboratorium Pemrograman Game — ITENAS Bandung** · Februari–Juli 2026: membimbing pengembangan game menggunakan Unity dan C#, termasuk scripting, fisika, animasi, antarmuka, debugging, serta deployment ke PC dan WebGL.
+- **Asisten Laboratorium Rekayasa Multimedia — ITENAS Bandung** · Oktober 2025–Januari 2026: membimbing praktikum multimedia interaktif dan produksi konten digital menggunakan Adobe Animate.
+- **Web Developer Intern — Human-Computer Interaction & Visualization, BRIN** · Juli–Agustus 2025: berkontribusi pada pengembangan frontend dan backend SISIRAJA dalam skema kerja hybrid di Bandung, Jawa Barat.
+
+## Pengalaman Organisasi
+
+- **Kepala Divisi Kewirausahaan — HMIF ITENAS** · Januari–Desember 2025: memimpin program kewirausahaan, perencanaan keuangan, kegiatan bisnis, dan kemitraan eksternal.
+- **Anggota Divisi Hubungan Masyarakat — HMIF ITENAS** · Juli–Desember 2024: mendukung komunikasi eksternal, publikasi kegiatan, serta kolaborasi sosial dan kemitraan.
+- **Anggota Divisi Sarana dan Inventaris — HMIF ITENAS** · Agustus 2023–Juni 2024: mengelola inventaris, pencatatan peminjaman, dan koordinasi penggunaan fasilitas organisasi.
+
+## Bidang dan Teknologi
+
+- **Artificial Intelligence:** machine learning, deep learning, TensorFlow, Keras, Scikit-learn, transfer learning, dan evaluasi model.
+- **Computer Vision:** OpenCV, MobileNetV3, YOLOv8, pengolahan citra, dan TensorFlow Lite.
+- **Web Development:** Laravel, Leaflet, API, PHP, dan JavaScript.
+- **Mobile Development:** Flutter, Dart, Android, dan integrasi TensorFlow Lite.
+- **Bahasa dan perangkat pengembangan:** Python, Java, C++, Git, GitHub, MySQL, PostgreSQL, Firebase, Docker, dan AWS.
+
+## Tentang Website
+
+Website menampilkan profil dan pendidikan, lima proyek dengan filter kategori dan detail proyek, perjalanan profesional dan organisasi, serta toolkit teknologi. Tersedia pilihan tema terang, gelap, atau mengikuti sistem, navigasi responsif, dan tautan resume serta kontak.
+
+## Kontak
+
+- [Email](mailto:rizki.tazidi@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/rizkitazidi047/)
+- [WhatsApp](https://wa.me/6287728476945)
+- [Resume](https://drive.google.com/file/d/1chnvxan4dEBdqhOuy3bjkp6Dn0c_zN0p/view?usp=sharing)
+
+---
+
+Logo teknologi menggunakan [Devicon v2.17.0](https://github.com/devicons/devicon/tree/v2.17.0). Merek dan logo merupakan milik pemiliknya masing-masing.
